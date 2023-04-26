@@ -5,9 +5,23 @@
     b. concatenate files. Note that the datastructure changes. The first 10 files have a different structure as compared to the next 22 files. Reporting structure has changed. Both are shown and saved in savepoints.
     c. filters are applied to select only what is needed. column names are cleaned
     d. analysis of outliers is done and dropped.
+	Outliers for trip duration are handled for 5% and 95% percentile data.
+	Outliers of stations is done.
     e. analysis of noise is done and dropped
     f. analysis of inconsistency is done and dropped
-    e. create a day level data with target variable
+	One Station Id can have different names, longitudes and latitudes. all such cases are handled in bothe the versions of the data structures. The names, longitude and latitude were interpolated with the most popular name, longitude and latitude within the station.
+    g. added borough and neighborhood to each of the station using its longitude and latitude.
+       checked if all stations got assigned. Drop if any station didnot get assigned.
+    h. merged the above information with the original dataframes in both the versions.
+    i. Day, Month, Year added to the dataframes.
+    j. All the rows with more than one day of bike renting are removed.
+    k. The same features in both versions are given same names.
+    l. Memory storage is reduced by changing objects and floats into categories
+    m. grouping by station id and date and selecting only those stations that have more than 633 transactions.
+    n. Date features like week, weekof the day, day of year,  weekend are added. 
+    o. Calculated the target variable target_ride_outflow by grouping station id and date by day level.
+    p. Imputed missing dates by backward filling per station.
+    q. Change the feature names and made compact.
+    
 
-
-    INCOMPLETE- VIDUSHI, go through code and fill it.
+    
