@@ -1,0 +1,13 @@
+1. First run getlinks.js on google chrome engine after visiting the citibike system data s3 bucket url. This returns a list of downloadable links with file names.
+2. Create an excel file of selected links- Feb 2020 to Oct 2022 for analysis
+3. Run the get_citibikedata.ipynb This file does the following:
+    a. download files 
+    b. concatenate files. Note that the datastructure changes. The first 10 files have a different structure as compared to the next 22 files. Reporting structure has changed. Both are shown and saved in savepoints.
+    c. filters are applied to select only what is needed. column names are cleaned
+    d. analysis of outliers is done and dropped.
+    e. analysis of noise is done and dropped
+    f. analysis of inconsistency is done and dropped
+    e. create a day level data with target variable
+
+
+    INCOMPLETE- VIDUSHI, go through code and fill it.
